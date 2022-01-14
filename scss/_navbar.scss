@@ -1,0 +1,172 @@
+/*=========== Nav Bar Styles Start Here =====================================*/
+  
+#navigation { 
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    .navbar-brand {
+        img {
+            width: auto;
+            height: 2.5rem;
+        }
+    } 
+    .nav-link {
+        font-size: .95rem; 
+        padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+    }  
+    // .dropdown-toggle::after {
+    //     content: none;
+    // }
+    .navbar-toggler {
+        width: 2.5rem;
+        height: 2.7rem;
+        padding: 0%;
+        position: relative;
+        .burg {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #918c8c;
+            border-radius: .2rem;
+            -webkit-border-radius: .2rem;
+            -moz-border-radius: .2rem;
+            -ms-border-radius: .2rem;
+            -o-border-radius: .2rem;
+            position: relative;
+        }
+        .burg:nth-child(2) {
+            margin: .4rem 0;
+            width: 80%;
+            transition: width .4s ease-in-out;
+            -webkit-transition: width .4s ease-in-out;
+            -moz-transition: width .4s ease-in-out;
+            -ms-transition: width .4s ease-in-out;
+            -o-transition: width .4s ease-in-out;
+        }
+        .burg:nth-child(3) {
+            width: 60%;
+            transition: width .4s ease-in-out;
+        }
+        span {
+            font-size: .75rem;
+            font-weight: 600;
+            color: #918c8c;
+        }
+    }
+    .navbar-toggler:hover {
+        .burg:nth-child(2),
+        .burg:nth-child(3) {
+            width: 100%;
+        }
+    }
+    .close_burg {
+        .burg {
+            transition: transform .2s ease-in-out;
+            -webkit-transition: transform .2s ease-in-out;
+            -moz-transition: transform .2s ease-in-out;
+            -ms-transition: transform .2s ease-in-out;
+            -o-transition: transform .2s ease-in-out;
+        }
+        .burg:nth-child(2) {
+            transform: translateX(-105%);
+            -webkit-transform: translateX(-105%);
+            -moz-transform: translateX(-105%);
+            -ms-transform: translateX(-105%);
+            -o-transform: translateX(-105%);
+            opacity: 0;
+        }
+        .burg:nth-child(1) {
+            position: absolute;
+            left: calc(50% - 18px);
+            top: calc(50% - 12px);
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .burg:nth-child(3) {
+            position: absolute;
+            left: calc(50% - 18px);
+            top: calc(50% - 12px);
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            width: 100%;
+        }
+    }
+    .close_burg:hover {
+        .burg:nth-child(1),
+        .burg:nth-child(3) {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+        }
+    }
+ 
+   
+}
+
+
+
+/* Add smart-scroll in Navigation class */  
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+} 
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*========== Back To Top Button Styles Start Here ====================*/
+
+#btnBackTop {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem .7rem 0.3rem 0.75rem;
+    background: #333333;
+    box-shadow: none;
+    display: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+#btnBackTop:hover {
+    background-color: #000;
+}
+ 
+@media (max-width: 991.99px) {
+    #navigation {
+        .navbar-brand {
+            margin-left: 13%;
+        }
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background-color: #fff;
+            padding: 2rem 1rem;
+        } 
+    }
+}
+ 
+  
